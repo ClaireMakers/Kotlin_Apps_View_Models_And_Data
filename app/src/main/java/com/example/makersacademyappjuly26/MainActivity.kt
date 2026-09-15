@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.makersacademyappjuly26.screens.HomePageScreen
 import com.example.makersacademyappjuly26.ui.theme.MakersAcademyAppJuly26Theme
 
 class MainActivity : ComponentActivity() {
@@ -21,17 +20,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MakersAcademyAppJuly26Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomePageScreen()
+                    App()
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MakersAcademyAppJuly26Theme {
-        HomePageScreen()
     }
 }

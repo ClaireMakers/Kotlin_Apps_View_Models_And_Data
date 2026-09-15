@@ -8,10 +8,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import com.example.makersacademyappjuly26.components.Banner
 
 @Composable
-fun HomePageScreen() {
+fun HomePageScreen(navController: NavController) {
     Banner()
     Column(modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -19,7 +20,7 @@ fun HomePageScreen() {
     ) {
         //Column content
         Text("Welcome to Makers Academy!")
-        Button(onClick = {}) {
+        Button(onClick = {navController.navigate("sd-course-screen")}) {
             Text("View the SD Course")
         }
     }
